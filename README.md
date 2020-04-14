@@ -4,7 +4,7 @@ This simple library offers conversion capabilities from numerical values to thei
 
 ## Installation
 
-Use npm to install number.
+Use npm to install
 
 ```bash
 npm i number-to-amharic-text
