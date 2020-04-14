@@ -39,6 +39,9 @@ function translateThree(num){
     let oneth = num%10;
     let tenth = Math.trunc((num%100)/10) ;
     let hundredth = Math.trunc((num%1000)/100);
+    if(num===0) {
+      return ones[0];
+    }
     if(oneth===0 && tenth ==0){
       return `${ones[hundredth]} ${_100}`;
     }
@@ -47,6 +50,7 @@ function translateThree(num){
     }
     return `${ones[hundredth]} ${_100} ${translateTwo(num)}`; 
     
+    return text; 
 }
 
 function translateTwo(num){
@@ -64,4 +68,3 @@ function translateTwo(num){
     }
     return `${tens[tenth]} ${ones[oneth]}`;
 }
-
