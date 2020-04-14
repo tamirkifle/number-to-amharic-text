@@ -1,10 +1,7 @@
 const helperObj = require('./helpers.js');
-let {ones, translateThree} = helperObj;
-const _10e3 = "ሺህ";
-const _10e6 = "ሚሊዮን";
-const _10e9 = "ቢሊዮን";
-const _10e12 = "ትሪሊዮን";
-const _10e15 = "ኳድሪሊዮን"
+const {ones, translateThree} = helperObj;
+const [amh_1e3,amh_1e6,amh_1e9,amh_1e12,amh_1e15] = ["ሺህ","ሚሊዮን","ቢሊዮን","ትሪሊዮን","ኳድሪሊዮን"];
+
 
 
 function numToAmhTxt(num) {
@@ -19,31 +16,31 @@ function numToAmhTxt(num) {
         quadrilliText = "";
     }
     else {
-        quadrilliText = `${translateThree(quadrillionths)} ${_10e15} `;
+        quadrilliText = `${translateThree(quadrillionths)} ${amh_1e15} `;
     }
     if (translateThree(trillionths) === "") {
         trilliText = "";
     }
     else {
-        trilliText = `${translateThree(trillionths)} ${_10e12} `;
+        trilliText = `${translateThree(trillionths)} ${amh_1e12} `;
     }
     if (translateThree(billionths) === "") {
         billiText = "";
     }
     else {
-        billiText = `${translateThree(billionths)} ${_10e9} `;
+        billiText = `${translateThree(billionths)} ${amh_1e9} `;
     }
     if (translateThree(millionths) === "") {
         milliText = "";
     }
     else {
-        milliText = `${translateThree(millionths)} ${_10e6} `;
+        milliText = `${translateThree(millionths)} ${amh_1e6} `;
     }
     if (translateThree(thousandths) === "") {
         thouText = "";
     }
     else {
-        thouText = `${translateThree(thousandths)} ${_10e3} `;
+        thouText = `${translateThree(thousandths)} ${amh_1e3} `;
     }
 
     if (translateThree(hundredths) === "") {
