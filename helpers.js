@@ -8,7 +8,6 @@ const ones = {
     7: "ሰባት",
     8: "ስምንት",
     9: "ዘጠኝ",
-    0: "ዜሮ"
 }
 
 const tens = {
@@ -26,10 +25,10 @@ const tens = {
 const _100 = "መቶ";
 
 
-function translateThree(num) {
-    let oneth = num % 10;
-    let tenth = Math.trunc((num % 100) / 10);
-    let hundredth = Math.trunc((num % 1000) / 100);
+function translateThree(num = 0) {
+    const oneth = num % 10;
+    const tenth = Math.trunc((num % 100) / 10);
+    const hundredth = Math.trunc((num % 1000) / 100);
     if (num === 0) {
         return "";
     }
@@ -44,8 +43,8 @@ function translateThree(num) {
 }
 
 function translateTwo(num) {
-    let oneth = num % 10;
-    let tenth = Math.trunc((num % 100) / 10);
+    const oneth = num % 10;
+    const tenth = Math.trunc((num % 100) / 10);
 
     if (oneth === 0 && tenth === 1) {
         return `አስር`;
@@ -59,4 +58,4 @@ function translateTwo(num) {
     return `${tens[tenth]} ${ones[oneth]}`;
 }
 
-module.exports = {ones, translateThree};
+module.exports = translateThree;
