@@ -13,7 +13,7 @@ npm i number-to-amharic-text
 ## Usage
 
 ```node
-let convert = require("number-to-amharic-text");
+const convert = require("number-to-amharic-text");
 
 convert(5467) # returns 'አምስት ሺ አራት መቶ ስልሳ ሰባት'
 convert(875467) # returns 'ስምንት መቶ ሰባ አምስት ሺ አራት መቶ ስልሳ ሰባት'
