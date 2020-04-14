@@ -50,7 +50,7 @@ function numberToAmharicText(num) {
         hundText = `${translateThree(hundredths)}`;
     }
     if (num !== 0) {
-        return `${billiText}${milliText}${thouText}${hundText}`;
+        return `${billiText}${milliText}${thouText}${hundText}`.trim();
     }
     else if (num === 0) {
         return ones[0];
