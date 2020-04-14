@@ -47,7 +47,6 @@ function translateThree(num){
     }
     return `${ones[hundredth]} ${_100} ${translateTwo(num)}`; 
     
-    return text; 
 }
 
 function translateTwo(num){
