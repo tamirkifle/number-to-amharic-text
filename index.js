@@ -1,17 +1,17 @@
 const helperObj = require('./helpers.js');
-const {ones, translateThree} = helperObj;
-const [amh_1e3,amh_1e6,amh_1e9,amh_1e12,amh_1e15] = ["ሺህ","ሚሊዮን","ቢሊዮን","ትሪሊዮን","ኳድሪሊዮን"];
+const { ones, translateThree } = helperObj;
+const [amh_1e3, amh_1e6, amh_1e9, amh_1e12, amh_1e15] = ["ሺህ", "ሚሊዮን", "ቢሊዮን", "ትሪሊዮን", "ኳድሪሊዮን"];
 
 
 
-function numToAmhTxt(num) {
+function numberToAmharicText(num) {
     let hundredths = Math.trunc(num % 1000);
-    let thousandths = Math.trunc(num / 1000 % 1000);
+    let thousandths = Math.trunc(num / 1e3 % 1000);
     let millionths = Math.trunc(num / 1e6 % 1000);
-    let billionths = Math.trunc(num/1e9%1000);
-    let trillionths = Math.trunc(num/1e12%1000);
-    let quadrillionths = Math.trunc(num/1e15%1000);
-    let milliText, thouText, hundText, billiText,trilliText,quadrilliText;
+    let billionths = Math.trunc(num / 1e9 % 1000);
+    let trillionths = Math.trunc(num / 1e12 % 1000);
+    let quadrillionths = Math.trunc(num / 1e15 % 1000);
+    let milliText, thouText, hundText, billiText, trilliText, quadrilliText;
     if (translateThree(quadrillionths) === "") {
         quadrilliText = "";
     }
@@ -59,4 +59,4 @@ function numToAmhTxt(num) {
 }
 
 
-module.exports = numToAmhTxt;
+module.exports = numberToAmharicText;
