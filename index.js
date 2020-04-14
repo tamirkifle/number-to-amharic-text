@@ -1,6 +1,6 @@
 const helperObj = require('./helpers.js');
 let {ones, translateThree} = helperObj;
-const _10e3 = "ሺ";
+const _10e3 = "ሺህ";
 const _10e6 = "ሚሊዮን";
 const _10e9 = "ቢሊዮን";
 
