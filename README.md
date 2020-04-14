@@ -15,9 +15,9 @@ npm i number-to-amharic-text
 ```node
 const convert = require("number-to-amharic-text");
 
-convert(5467) # returns 'አምስት ሺ አራት መቶ ስልሳ ሰባት'
-convert(875467) # returns 'ስምንት መቶ ሰባ አምስት ሺ አራት መቶ ስልሳ ሰባት'
-convert("01200054") # returns'አንድ ሚሊዮን ሁለት መቶ ሺ ሃምሳ አራት'
+convert(5467) # returns 'አምስት ሺህ አራት መቶ ስልሳ ሰባት'
+convert(875467) # returns 'ስምንት መቶ ሰባ አምስት ሺህ አራት መቶ ስልሳ ሰባት'
+convert("01200054") # returns'አንድ ሚሊዮን ሁለት መቶ ሺህ ሃምሳ አራት'
 ```
 
 ## Contributing
