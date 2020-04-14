@@ -27,8 +27,6 @@ function numberToAmharicText(num) {
     if (num > 999999999){
         billionths = Math.trunc(num / 1e9 % 1000);
 
-        billionths = Math.trunc(num / 1e6 % 1000);
-
         if (billionths!== 0) {
             billiText = `${translateThree(billionths)} ${amh_1e9} `;
         }
@@ -36,16 +34,12 @@ function numberToAmharicText(num) {
     if (num > 999999999999){
         trillionths = Math.trunc(num / 1e12 % 1000);
 
-        trillionths = Math.trunc(num / 1e6 % 1000);
-
         if (trillionths!== 0) {
             trilliText = `${translateThree(trillionths)} ${amh_1e12} `;
         }
     }
     if (num > 999999999999999){
         quadrillionths = Math.trunc(num / 1e15 % 1000);
-
-        quadrillionths = Math.trunc(num / 1e6 % 1000);
 
         if (quadrillionths!== 0) {
             quadrilliText = `${translateThree(quadrillionths)} ${amh_1e15} `;
