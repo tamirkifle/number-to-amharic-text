@@ -40,7 +40,7 @@ function translateThree(num){
     let tenth = Math.trunc((num%100)/10) ;
     let hundredth = Math.trunc((num%1000)/100);
     if(num===0) {
-      return ones[0];
+      return "";
     }
     if(oneth===0 && tenth ==0){
       return `${ones[hundredth]} ${_100}`;
@@ -68,3 +68,44 @@ function translateTwo(num){
     }
     return `${tens[tenth]} ${ones[oneth]}`;
 }
+
+
+
+
+
+function translate(num){
+    let hundredths = Math.trunc(num%1000);
+   let thousandths = Math.trunc(num/1000%1000);
+   let millionths = Math.trunc(num/1000000%1000);
+//    let billionths = Math.trunc(num/1000000000%1000);
+//    let trillionths = Math.trunc(num/1000000000000%1000);
+let milliText,thouText,hundText;
+ if(translateThree(millionths)==="")  {
+     milliText = "";
+ }
+ else {
+     milliText = `${translateThree(millionths)} ${_10e6} `;
+ }
+ if(translateThree(thousandths)==="")  {
+    thouText = "";
+}
+else {
+    thouText = `${translateThree(thousandths)} ${_10e3} `;
+}
+
+if(translateThree(hundredths)==="")  {
+    hundText = "";
+}
+else {
+    hundText = `${translateThree(hundredths)}`;
+}
+if(num!==0){
+    return `${milliText}${thouText}${hundText}`;
+}
+else if(num===0){
+    return ones[0];
+}
+    
+}
+
+
