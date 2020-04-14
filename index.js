@@ -5,7 +5,8 @@ const [amh_1e3, amh_1e6, amh_1e9, amh_1e12, amh_1e15] = ["ሺህ", "ሚሊዮን
 function numberToAmharicText(num) {
     if(isNaN(num)) 
         return "";
-        
+    if(!Number.isSafeInteger(num))
+        return "";
     num = Math.abs(num);
     const hundredths = Math.trunc(num % 1000);
     let thousandths, millionths, billionths, trillionths, quadrillionths;
@@ -51,7 +52,6 @@ function numberToAmharicText(num) {
 
     
     if (num !== 0) {
-        console.log(hundredths);
         return `${quadrilliText}${trilliText}${billiText}${milliText}${thouText}${translateThree(Number(hundredths))}`.trim();
     }
     else {
